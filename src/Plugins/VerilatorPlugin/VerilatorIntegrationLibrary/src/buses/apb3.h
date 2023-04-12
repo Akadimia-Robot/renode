@@ -26,5 +26,6 @@ struct APB3 : public BaseTargetBus
     uint8_t  *pready;       // OUT
     uint32_t  *prdata;      // OUT
     uint8_t  *pslverr;
+    uint8_t  *pstrb;
 };
 #endif
