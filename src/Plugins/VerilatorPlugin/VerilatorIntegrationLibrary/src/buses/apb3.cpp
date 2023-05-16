@@ -44,7 +44,7 @@ void APB3::write(int width, uint64_t addr, uint64_t value)
     }
     *psel = 1;
     *pwrite = 1;
-    *pstrb = 1;
+    *pstrb = 0xFF;  //As the bus doesn't support the strobe signal - tie all pins high to make all lanes active.
     *paddr = addr;
     *pwdata = value;
     tick(true);
